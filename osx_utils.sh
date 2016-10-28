@@ -212,7 +212,6 @@ function get_macpython_environment {
     # Puts directory of $PYTHON_EXE on $PATH
     local version=$1
     local venv_dir=$2
-    remove_travis_ve_pip
     install_macpython $version
     install_pip
     if [ -n "$venv_dir" ]; then
