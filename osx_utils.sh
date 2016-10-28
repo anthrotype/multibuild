@@ -218,8 +218,11 @@ function get_macpython_environment {
     if [ -n "$venv_dir" ]; then
         install_virtualenv
         make_workon_venv $venv_dir
+        source venv/bin/activate
+    else
+        export PATH="`dirname $PYTHON_EXE`:$PATH"
     fi
-    set_py_vars
+    export PYTHON_EXE PIP_CMD
 }
 
 function repair_wheelhouse {
