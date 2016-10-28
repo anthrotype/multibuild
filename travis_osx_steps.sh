@@ -16,7 +16,6 @@ function before_install {
     export CC=clang
     export CXX=clang++
     get_macpython_environment $MB_PYTHON_VERSION venv
-    source venv/bin/activate
     pip install --upgrade pip wheel
 }
 
